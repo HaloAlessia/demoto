@@ -16,7 +16,8 @@ Page({
       },
       {
         icon: "index.png",
-        desc: "随缘乐助"
+        desc: "随缘乐助",
+        url: "../../pages/suiyuan-list/suiyuan-list"
       },
       {
         icon: "index.png",

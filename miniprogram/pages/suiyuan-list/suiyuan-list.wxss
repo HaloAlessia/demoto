@@ -1,0 +1,20 @@
+/* pages/suiyuan-list/suiyuan-list.wxss */
+.suiyuan-item {
+  background-color: #E4E4E4;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.suiyuan-name {
+  color: white;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.suiyuan-time {
+  position: relative;
+  left: 160px;
+}

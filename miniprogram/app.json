@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/mine/mine",
-    "pages/pufo-list/pufo-list"
+    "pages/pufo-list/pufo-list",
+    "pages/suiyuan-list/suiyuan-list"
   ],
   "window": {
     "backgroundTextStyle": "light",
