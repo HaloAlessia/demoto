@@ -1,0 +1,12 @@
+<!--pages/pufo-list/pufo-list.wxml-->
+<view class="pufo-list">
+  <block wx:for="{{list}}" wx:key="desc">
+    <navigator url="{{item.url}}" open-type="redirect">
+      <view class="pufo-item">
+        <image bindtap="onPuFo" src="{{item.blogimg}}" />
+        <text class="pufo-name">{{item.name}}</text>
+        <text class="pufo-time">{{item.gmt_create}}</text>
+      </view>
+    </navigator>
+  </block>
+</view>

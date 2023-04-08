@@ -1,0 +1,36 @@
+/**index.wxss**/
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 100%;
+}
+
+.images swiper {
+  width: 100%;
+}
+
+.operations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.operation {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.operation image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.operation button {
+  width: 250rpx;
+  font-size: small;
+}
