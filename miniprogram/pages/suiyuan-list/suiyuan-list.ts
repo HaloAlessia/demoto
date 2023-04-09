@@ -7,6 +7,8 @@ Page({
    * Page initial data
    */
   data: {
+    id: 0,
+    buttonText: '开始', // Set the text for the button
     list: []
   },
 
@@ -27,8 +29,11 @@ Page({
   onLoad() {
     this.getNaturalList()
   },
-
-  onPuFo() {
+  handleButtonClick: function () {
+    // Handle button click event
+    console.log('Button clicked')
+  },
+  onSiyuan() {
     console.log('click suiyuan')
   },
 

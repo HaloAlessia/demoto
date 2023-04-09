@@ -1,20 +1,54 @@
 /* pages/suiyuan-list/suiyuan-list.wxss */
-.suiyuan-item {
-  background-color: #E4E4E4;
-  width: 300px;
-  height: 300px;
-  position: relative;
+.siyuan-item {
+  display: flex;
+  justify-content: center;
 }
-
+.suiyuan-info {
+  background-color: #E4E4E4;
+  width: 330px;
+  height: 280px;
+  position: relative;
+  display: flex;
+  /* align-items:center;    垂直居中 */
+  justify-content: center;
+  /* 水平居中 */
+  text-align: center;
+}
+.suiyuan-info .image{
+  width: 320px;
+}
 .suiyuan-name {
   color: white;
   position: absolute;
   top: 70%;
-  left: 40%;
+  font-size: large;
+  /* left: 30%; */
   /* transform: translate(-50%, -50%); */
 }
 
-.suiyuan-time {
+/* .suiyuan-time {
   position: relative;
   left: 160px;
+} */
+
+
+
+.start-btn {
+  background-color:#E4E4E4;
+  /* width: 180rpx; */
+  /* align-items:center;    垂直居中 */
+  /* justify-content: center; */
+  /* 水平居中 */
+  /* text-align: center; */
+}
+
+.startbtn{
+
+  background-color: #f7981dee;
+  color: #0c0b0bee;
+  padding: 0px;
+  height: 435rpx;
+  text-align: left;
+  text-align: bottom;
+  align-items:center;   
 }
