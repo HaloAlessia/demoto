@@ -32,6 +32,7 @@ Page({
     locationIndex: 0,
     locationName: "紫薇",
     amount: 0,
+    msg: ""
   },
 
 
@@ -46,8 +47,8 @@ Page({
     const body = {
       user: [
         {
-          name: "韩信",
-          msg: "",
+          name: this.data.msg,
+          msg: this.data.msg,
           amount: this.data.amount,
           birthday: "",
         }
@@ -67,6 +68,12 @@ Page({
     this.setData({
       locationIndex: index,
       locationName: this.data.locations[index].name
+    })
+  },
+
+  onMsgChange(event: any) {
+    this.setData({
+      msg: event.detail.value
     })
   },
 

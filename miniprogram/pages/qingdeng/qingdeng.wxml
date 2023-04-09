@@ -11,6 +11,16 @@
       range="{{locations}}">星宿：  {{locationName}}</picker>
   </view>
   <view class="qingdeng-item">
+    <text class="qingdeng-item-name">消息：</text>
+    <input 
+      class="weui-input" 
+      auto-focus 
+      placeholder="输入消息"
+      type="text"
+      bindinput="onMsgChange"
+    />
+  </view>
+  <view class="qingdeng-item">
     <text class="qingdeng-item-name">金额：</text>
     <input 
       class="weui-input" 
