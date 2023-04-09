@@ -29,6 +29,7 @@ Page({
   onLoad() {
     this.getNaturalList()
   },
+
   handleButtonClick: function () {
     // Handle button click event
     console.log('Button clicked')
