@@ -1,4 +1,4 @@
-// pages/start-activity/start-activity.ts
+// pages/blog-story/blog-story.ts
 const { get } = require('../../utils/request')
 
 Page({
@@ -6,9 +6,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id: 0
+    id: 0,
+    activities: [], // Set the URL for the cross-origin page
+    buttonText: '开始' // Set the text for the button
   },
-
+  async getActivityrInfo() {
+    const url = '/api/activity/info'
+    let that = this;
+    const query = {
+      id: that.data.id
+    }
+    const res = await get(url, query)
+    console.log('data===', res)
+    this.setData({ activities: res.data.activities })
+  },
   
   /**
    * 生命周期函数--监听页面加载
@@ -17,9 +28,12 @@ Page({
     this.setData({
       id: parseInt(options.id)
     });
-    
+    this.getActivityrInfo();
   },
-
+  handleButtonClick: function () {
+    // Handle button click event
+    console.log('Button clicked')
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

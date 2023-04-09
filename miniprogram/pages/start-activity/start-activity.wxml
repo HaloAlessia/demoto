@@ -1,7 +1,2 @@
 <!--pages/start-activity/start-activity.wxml-->
-<view class="container">
-  <view class="activity-blog" wx:for="{{activities}}" wx:key="{{item.id}}">
-    <web-view src="{{item.blogtext}}">  
-    </web-view>
-  </view>
-</view>
+<text>pages/blog-story/blog-story.wxml</text>
