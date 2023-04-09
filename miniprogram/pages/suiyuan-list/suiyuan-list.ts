@@ -28,7 +28,7 @@ Page({
     this.getNaturalList()
   },
 
-  onPuFo() {
+  onSuiyuan() {
     console.log('click suiyuan')
   },
 
