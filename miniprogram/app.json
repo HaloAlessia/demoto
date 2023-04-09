@@ -6,12 +6,13 @@
     "pages/pufo-list/pufo-list",
     "pages/qingdeng/qingdeng",
     "pages/suiyuan-list/suiyuan-list",
+    "pages/blog-story/blog-story",
     "pages/start-activity/start-activity"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Denoted",
+    "navigationBarTitleText": "寺院",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

@@ -1,11 +1,12 @@
 <!--pages/suiyuan-list/suiyuan-list.wxml-->
 <view class="suiyuan-list">
-  <block wx:for="{{list}}" wx:key="{{item.id}}">
-    <navigator url="/pages/qingdeng/qingdeng">
-      <view class="suiyuan-item">
+  <view class="siyuan-item" wx:for="{{list}}" wx:key="{{item.id}}">
+    <navigator class="introduce" url="/pages/qingdeng/qingdeng">
+      <view class="suiyuan-info">
         <image bindtap="onSuiyuan" src="{{item.blogimg}}" />
-        <text class="suiyuan-name">{{item.name}}</text>       
+        <text class="suiyuan-name">{{item.name}}</text>
       </view>
     </navigator>
-  </block>
+
+  </view>
 </view>
