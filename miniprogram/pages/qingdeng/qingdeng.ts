@@ -47,7 +47,7 @@ Page({
     const body = {
       user: [
         {
-          name: "韩信",
+          name: this.data.msg,
           msg: this.data.msg,
           amount: this.data.amount,
           birthday: "",
