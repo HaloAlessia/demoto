@@ -1,11 +1,10 @@
 <!--pages/suiyuan-list/suiyuan-list.wxml-->
 <view class="suiyuan-list">
-  <block wx:for="{{list}}" wx:key="desc">
-    <navigator url="{{item.url}}" open-type="redirect">
+  <block wx:for="{{list}}" wx:key="{{item.id}}">
+    <navigator url="/pages/start-activity/start-activity?id={{item.id}}">
       <view class="suiyuan-item">
         <image bindtap="onSuiyuan" src="{{item.blogimg}}" />
-        <text class="suiyuan-name">{{item.name}}</text>
-        <text class="suiyuan-time">{{item.gmt_create}}</text>
+        <text class="suiyuan-name">{{item.name}}</text>       
       </view>
     </navigator>
   </block>

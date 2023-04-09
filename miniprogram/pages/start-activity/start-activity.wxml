@@ -1,0 +1,10 @@
+<!--pages/start-activity/start-activity.wxml-->
+<view class="container">
+  <view class="activitu-blog" wx:for="{{activities}}" wx:key="{{item.id}}" >
+    <web-view src="{{item.blogtext}}"></web-view>
+  </view>
+  <block class="bottom-btn">
+    <button bindtap="handleButtonClick">{{buttonText}}</button>
+  </block>
+
+</view>

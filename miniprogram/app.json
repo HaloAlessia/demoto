@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/mine/mine",
     "pages/pufo-list/pufo-list",
-    "pages/suiyuan-list/suiyuan-list"
+    "pages/suiyuan-list/suiyuan-list",
+    "pages/start-activity/start-activity"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -11,7 +11,7 @@
       </swiper>
   </view>
   <view class="operations">
-  <block wx:for="{{operations}}" wx:key="desc">
+  <block wx:for="{{operations}}" wx:key="desc" wx:key="desc">
     <navigator url="{{item.url}}" open-type="redirect">
       <view class="operation">
         <image src="../../icons/{{item.icon}}">{{item.desc}}</image>

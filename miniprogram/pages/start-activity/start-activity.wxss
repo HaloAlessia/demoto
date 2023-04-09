@@ -1,0 +1,16 @@
+/* pages/start-activity/start-activity.wxss */
+
+.bottom-btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  background: rgb(240, 167, 31);
+}
+
+.bottom-btn .button {
+  background: rgb(245, 141, 23);
+}
