@@ -1,9 +1,15 @@
 /* pages/pufo-list/pufo-list.wxss */
 .pufo-item {
+  display: flex;
+  justify-content: center;
+}
+
+.pufo-info {
   background-color: #E4E4E4;
-  width: 300px;
+  width: 330px;
   height: 300px;
   position: relative;
+
 }
 
 .pufo-name {
@@ -11,10 +17,23 @@
   position: absolute;
   top: 70%;
   left: 40%;
+  font-size: large;
   /* transform: translate(-50%, -50%); */
 }
 
 .pufo-time {
   position: relative;
   left: 160px;
+}
+
+.introduce-btn{
+  padding: 0;
+  background-color: transparent;   /*按钮透明*/  
+  border:none;				/*设置按钮边框*/
+  width: 100rpx;
+  height: 100rpx;
+}
+.btn-img{
+  width: 100rpx;
+  height: 100rpx;
 }
