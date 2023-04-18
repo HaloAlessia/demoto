@@ -1,12 +1,13 @@
 /* pages/mine/mine.wxss */
+@import "../../utils/font.wxss"; 
+
 .user-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20rpx 0;
-  box-sizing: border-box;
-  background-color: #E4E4E4;
+  /* box-sizing: border-box; */
+  background-color:transparent;
 } 
 .userinfo {
   display: flex;
@@ -16,7 +17,7 @@
   color: #ffffff;
   background-color: #B4956C;
   width: 100%;
-  height: 500rpx;
+  height: 300rpx;
 }
 
 .userinfo-avatar {
@@ -34,26 +35,37 @@
   margin: 30rpx 30rpx;
   background-color: #F7F7F7;
   border-radius: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
 }
 
 .user-op {
+ 
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 280rpx;
-  margin-top: 20rpx;
+  justify-content: left;
+  width: 300rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
 }
 
 .user-op-all {
+ /* color: #B8976D; */
+ color: #50504f;
+  font-size: 30rpx;
+  font-weight: 300rpx;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  /* margin-right: 30rpx; */
+  margin-bottom: 30rpx;
 }
 
 .user-op-all text:nth-child(2) {
+
   margin-right: 30rpx;
 }
 
@@ -63,3 +75,53 @@
   margin-left: 30rpx;
   margin-right: 30rpx;
 }
+
+.redirect{
+  color: #B4956C;
+  margin-right: 30rpx;
+}
+
+ .droplet {
+  font-size: 33rpx;
+  font-weight: 600;
+  color: #494646;
+  text-shadow: 10px 10px 20px rgb(187, 184, 184);
+  position: relative;
+  width: 600rpx;
+  height: 600rpx;
+  margin:75rpx ;
+  box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+  25px 35px 20px rgba(0,0,0,0.05),
+  25px 30px 30px rgba(0,0,0,0.05),
+  inset -20px -20px 25px rgba(255,255,255,0.9);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 40rem/40rem; */
+  animation: move 5s linear infinite forwards;
+}
+
+.droplet::after {
+  position: absolute;
+  top: 18rpx;
+  left: 60rpx;
+  width: 20rpx;
+  height: 50rpx;
+  transform: rotate(60deg);
+
+  border-radius: 37% 54% 46% 46%;
+  background: #fff;
+  opacity: 0.9;
+}
+
+.droplet::before {
+  position: absolute;
+  top: 60rpx;
+  left: 28rpx;
+  width: 17rpx;
+  height: 17rpx;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.9;
+} 

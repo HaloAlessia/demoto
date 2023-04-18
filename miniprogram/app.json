@@ -7,26 +7,31 @@
     "pages/qingdeng/qingdeng",
     "pages/suiyuan-list/suiyuan-list",
     "pages/blog-story/blog-story",
-    "pages/start-activity/start-activity"
+    "pages/start-activity/start-activity",
+    "pages/my-order/my-order"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#B4956C",
     "navigationBarTitleText": "寺院",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#E6941A",
+    "color": "#666",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "icons/index.png",
-        "selectedIconPath": "icons/index-selected.png",
+        "iconPath": "icons/off_index.png",
+        "selectedIconPath": "icons/on_index.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/mine/mine",
-        "iconPath": "icons/mine.png",
-        "selectedIconPath": "icons/mine-selected.png",
+        "iconPath": "icons/off_my.png",
+        "selectedIconPath": "icons/on_my.png",
         "text": "我的"
       }
     ]

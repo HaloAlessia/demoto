@@ -6,7 +6,7 @@ App<IAppOption>({
   menuRight: 0, // 胶囊距右方间距（方保持左、右间距一致）
   menuBottom: 0, // 胶囊距底部间距（保持底部间距一致）
   menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
-  baseURL: "http://47.106.86.183:8361"
+  baseURL: "http://127.0.0.1:8361"
  },
   onLaunch() {
     // 展示本地存储能力

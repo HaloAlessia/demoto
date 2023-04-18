@@ -1,0 +1,44 @@
+@font-face {
+  font-family: AlimamaDongFangDaKai;
+	src:
+url(https://puhuiti.oss-cn-hangzhou.aliyuncs.com/AlimamaDongFangDaKai/AlimamaDongFangDaKai-Regular/AlimamaDongFangDaKai-Regular.ttf) format('TrueType');
+}
+.iconfont {
+  font-family:"AlimamaDongFangDaKai";
+}
+
+.iconEffect::after {
+    /* content: attr(aria-label); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  
+}
+.iconEffect::before {
+    animation: floatAbove 5s ease-in-out infinite;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+.iconEffect::after {
+    opacity: 0.9;
+    filter: blur(0.02em);
+    transform: translate(-50%, -50%) rotateX(21deg);
+    animation: floatBelow 5s ease-in-out infinite;
+    -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+@keyframes floatAbove {
+    50% {
+        transform: translate(-50%, -60%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 60%);
+    }
+}
+@keyframes floatBelow {
+    50% {
+        transform: translate(-50%, -60%) rotateX(10deg);
+        -webkit-clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+    }
+}

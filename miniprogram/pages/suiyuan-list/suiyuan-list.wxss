@@ -1,12 +1,29 @@
 /* pages/suiyuan-list/suiyuan-list.wxss */
+@import "../../utils/font.wxss";
+
 .siyuan-item {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  position: relative;
+  padding: 0;
 }
+
 .suiyuan-info {
   background-color: #E4E4E4;
-  width: 330px;
-  height: 280px;
+  left: 10rpx;
+  width: 732rpx;
+  height: 420rpx;
+  /*图片路径*/
+  background-size: 100% 100%;
+  /*图片显示大小*/
+  background-repeat: no-repeat;
+  margin: 15rpx auto;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 20rpx 20rpx 20rpx rgba(0, 0, 0, 0.05);
   position: relative;
   display: flex;
   /* align-items:center;    垂直居中 */
@@ -14,41 +31,54 @@
   /* 水平居中 */
   text-align: center;
 }
-.suiyuan-info .image{
-  width: 320px;
-}
+
 .suiyuan-name {
   color: white;
   position: absolute;
-  top: 70%;
-  font-size: large;
-  /* left: 30%; */
-  /* transform: translate(-50%, -50%); */
+  font-weight: 100;
+  padding: 10rpx;
+  bottom: 10rpx;
+  left: 10rpx;
+  right: 90rpx;
+  z-index: 10;
+  background: #CBBFAE;
+  background: rgba(190, 176, 155, 0.4);
+  border-left: 4rpx solid rgba(255, 255, 255, 0.7);
 }
 
-/* .suiyuan-time {
-  position: relative;
-  left: 160px;
-} */
-
-
-
-.start-btn {
-  background-color:#E4E4E4;
-  /* width: 180rpx; */
-  /* align-items:center;    垂直居中 */
-  /* justify-content: center; */
-  /* 水平居中 */
-  /* text-align: center; */
+.suiyuan-about {
+  width: 40rpx;
+  height: 40rpx;
+  background: white;
+  position: absolute;
+  padding: 8rpx;
+  bottom: 25rpx;
+  right: 25rpx;
+  z-index: 10;
+  background: #CBBFAE;
+  background: rgba(190, 176, 155, 0.4);
+  border-radius: 48%;
+  animation: foo 0.2s linear infinite, bar 6s infinite ease alternate;
 }
 
-.startbtn{
+@keyframes foo {
+  to {
+    transform: rotate(90deg);
+  }
+}
 
-  background-color: #f7981dee;
-  color: #0c0b0bee;
-  padding: 0px;
-  height: 435rpx;
-  text-align: left;
-  text-align: bottom;
-  align-items:center;   
+@keyframes bar {
+  to {
+    border-radius: 45%;
+  }
+}
+
+.suiyuan-a-icon {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  bottom: 35rpx;
+  right: 35rpx;
+  z-index: 100; 
+  /* mix-blend-mode: darken; */
 }

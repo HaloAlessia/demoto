@@ -1,34 +1,18 @@
 <!--pages/qingdeng/qingdeng.wxml-->
-<view class="qingdeng">
-  <view class="qingdeng-item">
-    <text class="qingdeng-item-name">星宿</text>
-    <picker 
-      class="picker"
-      mode="selector" 
-      bindchange="onLocationSelect" 
-      range-key="name"
-      value="{{locationIndex}}"
-      range="{{locations}}">星宿：  {{locationName}}</picker>
+<view class="qingdeng-container">
+  <view class="qingdeng-info">
+    <text class="qingdeng-item-name"></text>
+    <picker class="picker" mode="selector" placeholder="请选择星宿" bindchange="onLocationSelect" range-key="name" value="{{locationIndex}}" range="{{locations}}">星宿： {{locationName}}
+    </picker>
+    <image class="origin_img" src="../../icons/pulldown.png" alt="下拉"></image>
   </view>
   <view class="qingdeng-item">
     <text class="qingdeng-item-name">消息：</text>
-    <input 
-      class="weui-input" 
-      auto-focus 
-      placeholder="输入消息"
-      type="text"
-      bindinput="onMsgChange"
-    />
+    <input class="weui-input" auto-focus placeholder="输入消息" type="text" bindinput="onMsgChange" />
   </view>
   <view class="qingdeng-item">
     <text class="qingdeng-item-name">金额：</text>
-    <input 
-      class="weui-input" 
-      auto-focus 
-      placeholder="输入金额"
-      type="digit"
-      bindinput="onAmountChange"
-    />
+    <input class="weui-input" auto-focus placeholder="输入金额" type="digit" bindinput="onAmountChange" />
   </view>
   <button bindtap="onQingDeng">提交</button>
 </view>

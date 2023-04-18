@@ -2,7 +2,7 @@
 <view class="user-container">
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
+      <view class=" userinfo-avatar" bindtap="bindViewTap">
         <open-data type="userAvatarUrl"></open-data>
       </view>
       <open-data type="userNickName"></open-data>
@@ -17,16 +17,18 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="user-op-list">
+  <view class="droplet user-op-list ">
     <block wx:for="{{mines}}" wx:key="desc">
-    <view class="user-op-all">
-      <view class="user-op">
-        <image src="../../icons/{{item.icon}}"></image>
-        <text bindtap="{{item.func}}">{{item.desc}}</text>
-      </view>
-      <text>></text>
-    </view>
+      <navigator hover-class="none" url="{{item.url}}" >
+        <view class=" user-op-all ">
+          <view class=" user-op">
+            <image src="../../icons/{{item.icon}}"></image>
+            <!-- <text class=" iconfont" bindtap="{{item.func}}">{{item.desc}}</text> -->
+            <text class=" iconfont">{{item.desc}}</text>
+          </view>
+          <text class="redirect">></text>
+        </view>
+      </navigator>
     </block>
   </view>
 </view>
-

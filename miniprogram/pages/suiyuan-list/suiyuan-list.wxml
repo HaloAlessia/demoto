@@ -1,12 +1,16 @@
 <!--pages/suiyuan-list/suiyuan-list.wxml-->
 <view class="suiyuan-list">
   <view class="siyuan-item" wx:for="{{list}}" wx:key="{{item.id}}">
-    <navigator class="introduce" url="/pages/qingdeng/qingdeng">
-      <view class="suiyuan-info">
-        <image bindtap="onSuiyuan" src="{{item.blogimg}}" />
-        <text class="suiyuan-name">{{item.name}}</text>
+    <navigator hover-class="none" class="introduce" url="/pages/qingdeng/qingdeng">
+      <view class="suiyuan-info" style="background-image: url('{{item.blogimg}}')">
+        <!-- <image  src="{{item.blogimg}}" /> -->
+        <text class="iconfont suiyuan-name">{{item.name}}</text>
       </view>
     </navigator>
-
+    <view hover-class="none" class="suiyuan-about" bindtap="goBlog" data-blogtext="{{item.blogtext}}">       
+    </view>
+    <image hover-class="none" bindtap="goBlog" data-blogtext="{{item.blogtext}}" class="suiyuan-a-icon" src="../../icons/help2.png" ></image>
+    <!-- <web-view wx:if="{{isShow}}" src="{{item.blogtext}}"> 
+    </web-view> -->
   </view>
 </view>

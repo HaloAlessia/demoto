@@ -3,6 +3,6 @@
     "navigation-search": "/components/navigation-search/navigation-search"
   },
   "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTitleText": "微信接口功能演示",
+  "navigationBarTitleText": "DEMO",
   "navigationStyle": "custom"
 }

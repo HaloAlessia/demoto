@@ -1,23 +1,28 @@
 <!--index.wxml-->
 <navigation-search default-data="{{defaultData}}"></navigation-search>
 <view class="container">
-  <view class="images">
-    <swiper autoplay="true" indicator-dots="true">
-        <block wx:for="{{images}}" wx:key="*this">
-          <swiper-item>
-            <view class="swiper-item"><image src="../../icons/{{item}}.png" /></view>
-          </swiper-item>
-        </block>
-      </swiper>
+  <view class="swiFather">
+    <swiper class="swiFather-banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <swiper-item wx:for="{{indexBanner}}" wx:key="{{item.id}}">
+        <view class="swiFather-banner-view">
+          <image src="{{item.banner_url}}" class="swiFather-banner-view-image" background-size="cover"></image>
+        </view>
+      </swiper-item>
+    </swiper> 
   </view>
   <view class="operations">
-  <block wx:for="{{operations}}" wx:key="desc" wx:key="desc">
-    <navigator url="{{item.url}}" open-type="redirect">
-      <view class="operation">
-        <image src="../../icons/{{item.icon}}">{{item.desc}}</image>
-        <button>{{item.desc}}</button>
-      </view>
-    </navigator>
-  </block>
+    <block wx:for="{{operations}}" wx:key="desc">
+      <navigator hover-class="none" url="{{item.url}}">
+        <view class="operation">
+          <!-- <image src="../../icons/{{item.icon}}">{{item.desc}}</image>
+          <button>{{item.desc}}</button> -->          
+          <view class="iconfont wrapper">
+            <view class="iconEffect droplet">
+              <text >{{item.desc}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
   </view>
 </view>

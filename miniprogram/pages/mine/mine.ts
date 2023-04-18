@@ -7,26 +7,27 @@ Page({
   data: {
     mines: [
       {
-        icon: "index.png",
+        icon: "order2.png",
+        desc: "我的预定",
+        url: "../../pages/my-order/my-order"
+      },
+      {
+        icon: "meditation.png",
         desc: "我的禅房",
         func: "getMyZenHouses"
       },
       {
-        icon: "index.png",
+        icon: "clan.png",
         desc: "我的祠堂"
       },
       {
-        icon: "index.png",
-        desc: "我的预定"
-      },
-      {
-        icon: "index.png",
-        desc: "意见反馈"
-      },
-      {
-        icon: "index.png",
+        icon: "class.png",
         desc: "联系课堂"
       },
+      {
+        icon: "response.png",
+        desc: "意见反馈"
+      }
     ],
     userInfo: {},
     hasUserInfo: false,

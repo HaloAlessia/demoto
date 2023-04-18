@@ -8,7 +8,8 @@ Page({
    */
   data: {
     id: 0,
-    buttonText: '开始', // Set the text for the button
+    blogtext:{},   
+    isShow:false,
     list: []
   },
 
@@ -22,7 +23,17 @@ Page({
     console.log('data===', res)
     this.setData({ list: res.data.activities })
   },
-
+  goBlog:function(event) {
+    this.setData({
+      isShow:true
+    })
+    let blogtext = event.currentTarget.dataset.blogtext
+    // blogtext = JSON.stringify(blogtext)
+    console.log(blogtext); 
+    wx.navigateTo({
+      url:'../../pages/blog-story/blog-story?blogtext='+blogtext,
+    });
+  },
   /**
    * Lifecycle function--Called when page load
    */
@@ -33,9 +44,6 @@ Page({
   handleButtonClick: function () {
     // Handle button click event
     console.log('Button clicked')
-  },
-  onSiyuan() {
-    console.log('click suiyuan')
   },
 
   /**
