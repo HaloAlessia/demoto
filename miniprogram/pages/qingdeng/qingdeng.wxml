@@ -1,10 +1,16 @@
 <!--pages/qingdeng/qingdeng.wxml-->
 <view class="qingdeng-container">
   <view class="qingdeng-info">
-    <text class="qingdeng-item-name"></text>
-    <picker class="picker" mode="selector" placeholder="请选择星宿" bindchange="onLocationSelect" range-key="name" value="{{locationIndex}}" range="{{locations}}">星宿： {{locationName}}
+  <view class="qingdeng-selector">
+    <text class="qingdeng-item-name">星宿</text>
+    <myradio name="gender" value="1"></myradio>
+    <view class="qingdeng-picker">      
+      <picker class="picker" mode="selector" placeholder="请选择星宿" bindchange="onLocationSelect" range-key="name" value="{{locationIndex}}" range="{{locations}}"> {{locationName}}
     </picker>
-    <image class="origin_img" src="../../icons/pulldown.png" alt="下拉"></image>
+    <image class="picker_img" src="../../icons/pulldown.png" alt="下拉"></image>
+    <text class="qingdeng-picker-name"></text>
+    </view>    
+  </view>
   </view>
   <view class="qingdeng-item">
     <text class="qingdeng-item-name">消息：</text>
