@@ -1,24 +1,68 @@
 <!--pages/qingdeng/qingdeng.wxml-->
 <view class="qingdeng-container">
   <view class="qingdeng-info">
-  <view class="qingdeng-selector">
-    <text class="qingdeng-item-name">星宿</text>
-    <myradio name="gender" value="1"></myradio>
-    <view class="qingdeng-picker">      
-      <picker class="picker" mode="selector" placeholder="请选择星宿" bindchange="onLocationSelect" range-key="name" value="{{locationIndex}}" range="{{locations}}"> {{locationName}}
-    </picker>
-    <image class="picker_img" src="../../icons/pulldown.png" alt="下拉"></image>
-    <text class="qingdeng-picker-name"></text>
-    </view>    
+    <view class="con" wx:for="{{list}}" wx:key="list" wx:for-item="itemP" wx:for-index="indexP">
+  <view class="head">
+    <block wx:for="{{itemP.stepInfo}}" wx:key='list' wx:for-item="item" wx:for-index="index">
+      <view class="head_info">
+        <image class="head_icon" src="{{item.status==1?itemP.sel_icon:'../../icons/unfinished-progress.png'}}"></image>
+        <view class="head_title">{{item.pro_name}}</view>
+        <view wx:if="{{index!=0}}" class='head_line' style="width:{{600/(itemP.stepInfo.length-1)}}rpx;background:{{item.status==1?itemP.pro_color:''}};"></view>
+      </view>
+    </block>
   </view>
+</view>
+<!-- 
+    <view class="con" wx:for="{{list}}" wx:key="list" wx:for-item="itemP" wx:for-index="indexP">
+  <view class="head">
+    <progress percent="{{itemP.per}}" stroke-width="2" color="{{itemP.pro_color}}" />
+    <block wx:for="{{itemP.stepInfo}}" wx:key='list' wx:for-item="item" wx:for-index="index">
+      <view class="head_info">
+        <image class="head_icon" src="{{item.status==1?itemP.sel_icon:'../../icons/unfinished-progress.png'}}"></image>
+        <view class="head_title">{{item.pro_name}}</view>
+      </view>
+    </block>
   </view>
-  <view class="qingdeng-item">
-    <text class="qingdeng-item-name">消息：</text>
-    <input class="weui-input" auto-focus placeholder="输入消息" type="text" bindinput="onMsgChange" />
+</view> -->
+
   </view>
-  <view class="qingdeng-item">
-    <text class="qingdeng-item-name">金额：</text>
-    <input class="weui-input" auto-focus placeholder="输入金额" type="digit" bindinput="onAmountChange" />
+  <view class="qingdeng-star">
+    <view class="qingdeng-selector">
+      <text class="qingdeng-item-name">请选择星类</text>
+      <myradio name="gender" value="1"></myradio>
+      <view class="qingdeng-picker">
+        <picker class="picker" mode="selector" placeholder="请选择星宿" bindchange="onLocationSelect" range-key="name" value="{{locationIndex}}" range="{{locations}}"> {{locationName}}
+        </picker>
+        <image class="picker_img" src="../../icons/pulldown.png" alt="下拉"></image>
+        <text class="qingdeng-picker-name"></text>
+      </view>
+    </view>
+
+    <view class="qingdeng-input">
+      <text class="qingdeng-item-name2">请填写信息</text>
+      <view class="qingdeng-item">
+        <text class="qingdeng-item-name">信息</text>
+        <image class="qingdeng-item-name-img" src="../../icons/msg.png" style="width: 20px;height:20px"></image>      
+        <input class="weui-input" auto-focus placeholder="请在此处输入信息" placeholder-class= "plh-input" type="text" bindinput="onMsgChange" />
+      </view>
+      <view class="qingdeng-tips"> 
+       <text class="qingdeng-message">必须填写，最长允许15个字符</text>
+       </view>
+      <view class="qingdeng-item">
+        <text class="qingdeng-item-name">金额</text>
+        <image class="qingdeng-item-name-img" src="../../icons/rmb.png" style="width: 20px;height:20px"></image> 
+        <input class="weui-input" auto-focus
+        placeholder="请在此处输入金额" placeholder-class= "plh-input" type="digit" bindinput="onAmountChange" />
+      </view>
+      <view class="qingdeng-tips"> 
+       <text class="qingdeng-message">以人民币元为单位</text>
+       </view>
+    </view>
+    <view class="qingdeng-summit" bindtap="onQingDeng">
+      <!-- <button bindtap="onQingDeng">提交</button> -->
+      支付
+    </view>
   </view>
-  <button bindtap="onQingDeng">提交</button>
+
+
 </view>

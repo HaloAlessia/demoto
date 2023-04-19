@@ -1,25 +1,39 @@
 /* pages/qingdeng/qingdeng.wxss */
+page{
+  background-color: #eeecec;
+}
 .qingdeng-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: transparent;
 }
 
 .qingdeng-info {
   display: flex;
   flex-direction: column;
-  color: #ffffff;
-  background-color: #cfa671;
+  /* color: #ffffff; */
+  background-color: #ffff;
   width: 100%;
-  height: 300rpx;
-
+  height: 220rpx;
 }
 
 .qingdeng-selector {
+  width: 96%;
   background-color: white;
-  margin: 10rpx;
+  margin: 20rpx 13rpx ;
+  padding-bottom: 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.qingdeng-input {
+  width: 96%;
+  background-color: white;
+  margin: 30rpx 13rpx ;
+  padding-bottom: 10rpx;
   border-radius: 10rpx;
   display: flex;
   flex-direction: column;
@@ -34,8 +48,19 @@
 }
 
 .qingdeng-item-name {
-  color: #424040;
+  color: #cc8931;
   margin: 20rpx;
+}
+
+.qingdeng-item-name2 {
+  color: #696767;
+  margin:20rpx 20rpx -20rpx;
+}
+
+.qingdeng-message {
+  color: #a7a4a4;
+  margin: 20rpx;
+  font-size: 25rpx;
 }
 
 .qingdeng-picker {
@@ -72,6 +97,81 @@
   position: absolute;
   z-index: 100;
   left: 310rpx;
-  top: 215rpx;
-
+  top: 455rpx;
 }
+
+.qingdeng-summit {
+  position: absolute;
+  color: #ffffff;
+  background-color: #cfa671;
+  width: 100%;
+  height: 80rpx;
+  bottom: 0%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+/* .weui-input{
+
+} */
+.qingdeng-item-name-img{
+  margin-right: 20rpx;
+  margin-left: -15rpx;
+}
+/* .plh-input{
+  color: #cfa671;
+} */
+
+.con {
+  padding: 24rpx 20rpx;
+  margin: 20rpx;
+  background: #FFFFFF;
+  border-radius: 8rpx;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.head_info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100rpx;
+  text-align: center;
+}
+
+.head_icon {
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 100;
+  background-color: white;
+  padding: 15rpx;
+}
+
+.head_title {
+  /* margin-top: 20rpx; */
+  font-size: 25rpx;
+  line-height: 35rpx;
+  color: #333333;
+}
+
+.head_line {
+  position: absolute;
+  top: 40rpx;
+  right: 35%;
+  height: 2rpx;
+  background: #cfa671;
+}
+
+
+progress {
+  width:600rpx;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+

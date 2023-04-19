@@ -1,7 +1,7 @@
 /* components/myradio.wxss */
 
 .radio {
-  width: 750rpx;
+  width: 700rpx;
   height: 65rpx;
   display: flex;
   /* justify-content: center; */
@@ -13,14 +13,13 @@
   border-radius: 5rpx;
   width: 300rpx;
   height: 65rpx;
-  border-: 5rpx;
   margin: 0 20rpx;
   background-color: lightgrey;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5rpx 3rpx 10rpx rgba(0, 0, 0, 0.1);
 }
 
 .item_active {

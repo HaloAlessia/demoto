@@ -1,6 +1,6 @@
 <!--components/myradio.wxml-->
 
 <view class="radio">
-    <view class="{{currentIndex==1?'item_active':'item'}}" bindtap="point" data-index="1">王星</view>
-    <view class="{{currentIndex==0?'item_active':'item'}}" bindtap="point" data-index="0">众星</view>
+    <view class="{{currentIndex==1?'item_active':'item'}}" bindtap="point" data-index="1">主星</view>
+    <view class="{{currentIndex==0?'item_active':'item'}}" bindtap="point" data-index="0">小星</view>
 </view>
